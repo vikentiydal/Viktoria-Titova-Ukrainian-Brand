@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Viktoria Titova | Modern Heritage Fashion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Description: A modern one-page template for the Viktoria Titova brand with Ukrainian-inspired colors and generated images -->
+  <style>
+    /* 
+      COLOR PALETTE (inspired by Ukrainian motifs):
+      - Blue:    #0057B7
+      - Yellow:  #F7D420
+      - Ivory background: #F9F5E6
+      - Dark text: #333
+    */
+
+    /* GLOBAL RESETS */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      color: #333;
+      background: #F9F5E6; /* Light ivory background */
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+    }
+    ul {
+      list-style-type: none;
+    }
+
+    /* HEADER / NAVBAR */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .logo {
+      font-weight: bold;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #0057B7; /* Ukrainian blue */
+    }
+    nav ul {
+      display: flex;
+      gap: 2rem;
+    }
+    nav ul li {
+      font-weight: 600;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    nav ul li:hover {
+      color: #666;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      background: 
+        /* Replace the URL below with your hero banner image link */
+        linear-gradient(
+          rgba(0, 87, 183, 0.6), 
+          rgba(0, 87, 183, 0.6)
+        ),
+        url('#') center/cover no-repeat;
+    }
+    .hero .hero-content {
+      padding: 2rem;
+      border-radius: 8px;
+      max-width: 800px;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+    .hero p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .cta {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: #F7D420; /* Ukrainian yellow */
+      color: #0057B7;
+      text-transform: uppercase;
+      font-weight: 600;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+    .cta:hover {
+      background-color: #ffdf4e;
+    }
+
+    /* MAIN CONTAINER */
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    /* LEAD PARAGRAPH */
+    .lead-paragraph {
+      background: #fff;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .lead-paragraph h2 {
+      color: #0057B7;
+      margin-bottom: 1rem;
+    }
+
+    /* TWO-COLUMN LAYOUT FOR IMAGE & PERSONAL EXPERIENCE */
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    @media (max-width: 768px) {
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+    }
+    .column-box {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .column-box h2 {
+      color: #0057B7;
+      margin-bottom: 1rem;
+    }
+    .personal-image {
+      width: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-top: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .testimonial {
+      font-style: italic;
+      margin-top: 1rem;
+      padding: 1rem;
+      background: #f0f0f0;
+      border-left: 4px solid #0057B7;
+      color: #333;
+    }
+
+    /* PRODUCT CARDS */
+    .main-body h2 {
+      color: #0057B7;
+      margin-bottom: 1rem;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .card {
+      background: #fff;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card .content {
+      padding: 1rem;
+    }
+    .card .content h3 {
+      margin-bottom: 0.75rem;
+      font-size: 1.1rem;
+      color: #0057B7;
+    }
+    .card .content p {
+      font-size: 0.9rem;
+      line-height: 1.4;
+      margin-bottom: 1rem;
+    }
+
+    /* DISCUSSION SECTION */
+    .discussion {
+      background: #fff;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .discussion h2 {
+      color: #0057B7;
+      margin-bottom: 1rem;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #fff;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER / NAVBAR -->
+  <header>
+    <nav>
+      <div class="logo">Viktoria Titova</div>
+      <ul>
+        <li><a href="#lead">Home</a></li>
+        <li><a href="#personal-experience">About</a></li>
+        <li><a href="#main-body">Products</a></li>
+        <li><a href="#discussion">Engage</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION WITH UKRAINIAN-INSPIRED BACKGROUND -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Modern Heritage Fashion</h1>
+      <p>Where Ukrainian Culture & Global Style Unite</p>
+      <a href="#main-body" class="cta">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <div class="container">
+
+    <!-- (1) LEAD PARAGRAPH -->
+    <section id="lead" class="lead-paragraph">
+      <h2>Lead Paragraph</h2>
+      <p>Discover the <strong>Viktoria Titova</strong> clothing line: a globally inspired, culturally authentic brand that seamlessly blends Ukrainian heritage, musical artistry, and modern travel aesthetics. Each piece reflects a commitment to sustainability, social responsibility, and timeless elegance.</p>
+    </section>
+
+    <!-- (2 & 3) RELEVANT IMAGE & PERSONAL EXPERIENCE -->
+    <div class="two-column">
+      <div id="personal-experience" class="column-box">
+        <h2>Personal Experience</h2>
+        <p>I am Viktoria Titova, the Creator, Owner, and CEO of this brand. My role involves weaving traditional craftsmanship with contemporary design, managing sustainable supply chains, and sharing our story worldwide. Guided by effectual entrepreneurship, I adapt swiftly to market changes and shape opportunities from available resources.</p>
+        <!-- Replace '#' with your generated personal headshot URL -->
+        <img class="personal-image" src="#" alt="Portrait of Viktoria Titova">
+        <div class="testimonial">
+          “I’ve never worn clothing that felt so alive with history,” says Maria K., an early customer from Berlin. “Each thread connects me to a global community of makers and dreamers.”
+        </div>
+      </div>
+      <div class="column-box">
+        <h2>Relevant Image (Embroidered Blouse)</h2>
+        <p><em>A meticulously crafted embroidered blouse: floral patterns in blue and yellow, stitched onto sustainable linen. Rich threads evoke centuries of cultural heritage, with a subtle violin motif—an homage to my musical roots—woven into the design.</em></p>
+        <!-- Replace '#' with your embroidered blouse image link -->
+        <img src="#" alt="Embroidered Blouse">
+      </div>
+    </div>
+
+    <!-- (4) MAIN BODY: PRODUCT CARDS -->
+    <section id="main-body" class="main-body">
+      <h2>Our Products</h2>
+      <p>We offer a range of apparel and accessories celebrating Ukrainian traditions, global travel influences, and musical inspiration. Each piece is ethically produced with local artisans, preserving heritage motifs for modern wardrobes.</p>
+      
+      <div class="cards">
+        <div class="card">
+          <!-- Replace '#' with your tailored jacket image link -->
+          <img src="#" alt="Tailored Jacket">
+          <div class="content">
+            <h3>Tailored Jacket</h3>
+            <p>Featuring subtle violin emblems and a concealed world-map lining, each jacket is a statement of cultural exploration through style.</p>
+          </div>
+        </div>
+        <div class="card">
+          <!-- Replace '#' with your handwoven scarf image link -->
+          <img src="#" alt="Handwoven Scarf">
+          <div class="content">
+            <h3>Handwoven Scarf</h3>
+            <p>Lovingly woven with local artisans, our scarves offer a vibrant accent, reminding you of the unity between heritage and modernity.</p>
+          </div>
+        </div>
+        <div class="card">
+          <!-- Replace '#' with an optional third or collection image link -->
+          <img src="#" alt="Additional Product Display">
+          <div class="content">
+            <h3>Collection Display</h3>
+            <p>A curated set of embroidered pieces, tailored jackets, and scarves that connect tradition with contemporary flair.</p>
+          </div>
+        </div>
+      </div>
+
+      <p style="margin-top:1rem;">
+        <strong>Technical Specifications &amp; Details:</strong><br>
+        <ul>
+          <li>Materials: Sustainable linen, organic cotton, ethically sourced wool</li>
+          <li>Embroidery &amp; Motifs: Traditional patterns, subtle violin emblems, color hints of blue & yellow</li>
+          <li>Fit &amp; Sizing: Standard international sizes (XS–XXL); custom options upon request</li>
+          <li>Care Instructions: Machine wash cold or hand wash; lay flat to dry</li>
+        </ul>
+      </p>
+      <p><strong>Note on Valuation:</strong> The brand’s worth merges tangible assets (fabric, prototypes) and intangible assets (artisanal collaborations, cultural narrative). With each positive review and expanding demand, our market value solidifies (Entrepreneur, n.d.).</p>
+    </section>
+
+    <!-- (5) DISCUSSION QUESTION -->
+    <section id="discussion" class="discussion">
+      <h2>Join the Conversation</h2>
+      <p>What aspect of cultural storytelling in fashion most resonates with you, and how would you weave global heritage into your personal style?</p>
+    </section>
+    
+    <!-- CONTACT & FOOTER -->
+    <section id="contact" class="discussion">
+      <h2>Contact</h2>
+      <p>
+        Email: <a href="mailto:info@viktoriatitova.com">info@viktoriatitova.com</a><br>
+        Instagram: <a href="#">@viktoriatitova_official</a><br>
+        Twitter: <a href="#">@viktoriatitova</a><br>
+        Address: Kurfürstendamm 123, Berlin, Germany
+      </p>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2024 Viktoria Titova. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
